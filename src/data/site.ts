@@ -12,7 +12,7 @@ export const site = {
     place: "Houston, Texas (EUA) · Universidade Rice",
     text: "Na etapa internacional da Copernicus Natural Science Olympiad, a prova de ciências naturais (química, física, biologia e astronomia) foi respondida em inglês. Na premiação, subi ao palco com a bandeira do Ceará.",
   },
-  achievements: [
+  olympiads: [
     { title: "OBA", description: "Olimpíada Brasileira de Astronomia e Astronáutica.", tag: "2025" },
     { title: "Olimpíadas de inglês", description: "SMETA e OBLI, olimpíadas de língua inglesa.", tag: "2025" },
     { title: "Linguagens, tecnologia e ciências", description: "Destaques e premiações em outras competições do conhecimento.", tag: "2025" },

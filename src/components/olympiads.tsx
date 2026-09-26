@@ -3,11 +3,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { site } from "@/data/site"
 
-export function Achievements() {
+export function Olympiads() {
   const { highlight } = site
   return (
-    <section id="conquistas" className="mx-auto max-w-5xl px-6 py-20">
-      <h2 className="mb-8 text-2xl font-bold tracking-tight">Conquistas</h2>
+    <section id="olimpiadas" className="mx-auto max-w-5xl px-6 py-20">
+      <h2 className="mb-8 text-2xl font-bold tracking-tight">Olimpíadas</h2>
 
       <Card className="mb-6 border-primary/30 bg-primary/5">
         <CardHeader>
@@ -21,7 +21,7 @@ export function Achievements() {
       </Card>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {site.achievements.map((a) => (
+        {site.olympiads.map((a) => (
           <Card key={a.title}>
             <CardHeader>
               <CardTitle>{a.title}</CardTitle>

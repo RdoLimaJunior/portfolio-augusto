@@ -13,7 +13,7 @@ export function Hero() {
       <p className="max-w-2xl text-lg text-muted-foreground">{site.tagline}</p>
       <div className="flex gap-3">
         <Button size="lg" asChild>
-          <a href="#conquistas">Ver conquistas <ArrowDown /></a>
+          <a href="#olimpiadas">Ver olimpíadas <ArrowDown /></a>
         </Button>
         <Button size="lg" variant="outline" asChild>
           <a href="#contato">Contato</a>

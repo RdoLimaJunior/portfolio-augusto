@@ -1,7 +1,7 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
-import { Achievements } from "@/components/achievements"
+import { Olympiads } from "@/components/olympiads"
 import { Media } from "@/components/media"
 import { Contact } from "@/components/contact"
 
@@ -12,7 +12,7 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Achievements />
+        <Olympiads />
         <Media />
         <Contact />
       </main>
