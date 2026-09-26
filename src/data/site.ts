@@ -29,6 +29,26 @@ export const site = {
     funds: ["Inscrições em olimpíadas", "Viagens e hospedagem em etapas nacionais e internacionais", "Materiais de estudo e preparação"],
     benefits: ["Logo da empresa no site", "Menção nas redes sociais do Augusto", "Atualizações sobre cada competição"],
   },
+  pressMore: [
+    { outlet: "Casa do Ceará", title: "Augusto de Paula Bezerra leva o Ceará ao pódio em olimpíada internacional de Ciências", url: "https://casadoceara.org.br/aos-8-anos-augusto-de-paula-bezerra-leva-o-ceara-ao-podio-em-olimpiada-internacional-de-ciencias/" },
+    { outlet: "O Povo", title: "Cearense é premiado em olimpíada internacional", url: "https://mais.opovo.com.br/jornal/cidades/2026/02/02/aos-8-anos-cearense-superdotado-e-premiado-em-olimpiada-internacional.html" },
+    { outlet: "Revista Crescer", title: "Cearense conquista medalha em Olimpíada Internacional de Ciências, nos EUA", url: "https://revistacrescer.globo.com/maes-e-pais/historias/noticia/2026/03/aos-8-cearense-conquista-medalha-em-olimpiada-internacional-de-ciencias-nos-eua.ghtml" },
+    { outlet: "Portal 6", title: "Aluno de escola pública vai aos EUA e conquista 3º lugar em competição internacional", url: "https://portal6.com.br/2026/08/18/aos-8-anos-aluno-de-escola-publica-no-interior-do-brasil-vai-aos-eua-e-conquista-3o-lugar-em-competicao-internacional-com-jovens-superdotados-de-todo-o-mundo/" },
+    { outlet: "Diário do Nordeste", title: "Estudante se classifica em olimpíada nos EUA e família faz vaquinha para a viagem", url: "https://diariodonordeste.verdesmares.com.br/ceara/crianca-superdotada-do-ce-se-classifica-em-olimpiada-nos-eua-e-familia-faz-vaquinha-para-viagem-1.3714210" },
+    { outlet: "URB News", title: "Governo do Ceará e Prefeitura de Baturité vão custear viagem de estudante para olimpíada nos EUA", url: "https://urbnews.com.br/2025/12/01/governo-do-ceara-e-prefeitura-de-baturite-vao-custear-viagem-de-estudante-superdotado-para-olimpiada-nos-eua/" },
+    { outlet: "Redenção News", title: "Aluno da rede pública de Baturité conquista medalha de bronze em olimpíada internacional de Ciências", url: "https://redencaonews.com.br/2026/01/aluno-da-rede-publica-de-baturite-conquista-medalha-de-bronze-em-olimpiada-internacional-de-ciencias-no-eua/" },
+    { outlet: "NE9", title: "Nordestino conquista Olimpíada Internacional de Ciências nos EUA", url: "https://ne9.com.br/nordestino-de-8-anos-conquista-olimpiada-internacional-de-ciencias-nos-eua/" },
+    { outlet: "Só Notícia Boa", title: "Brasileiro conquista medalha em olimpíada internacional de ciência", url: "https://www.sonoticiaboa.com.br/2026/02/01/brasileiro-superdotado-de-8-anos-conquista-medalha-em-olimpiada-internacional-de-ciencia" },
+    { outlet: "Portal Tri", title: "Brasileiro conquista medalha em olimpíada internacional de ciência nos Estados Unidos", url: "https://www.portaltri.com.br/noticias/42870/brasileiro-de-8-anos-conquista-medalha-em-olimpiada-internacional-de-ciencia-nos-estados-unidos" },
+    { outlet: "César Macedo", title: "Cearense conquista medalha em olimpíada internacional de ciências nos EUA", url: "https://cesarmacedo.com/crianca-superdotada-cearense-conquista-medalha-em-olimpiada-internacional-de-ciencias-nos-eua/" },
+    { outlet: "Jornal Jangadeiro (vídeo no Facebook)", title: "Reportagem em vídeo", url: "https://www.facebook.com/jornaljangadeiro/videos/840600248753377/" },
+    { outlet: "Razões para Acreditar (Facebook)", title: "Publicação sobre a conquista", url: "https://www.facebook.com/RazoesParaAcreditar/posts/o-pequeno-augusto-de-paula-bezerra-de-apenas-8-anos-encantou-o-mundo-ao-conquist/1233722912193503/" },
+  ],
+  instagramPosts: [
+    { label: "Publicação 1", url: "https://www.instagram.com/p/DUD6bb2CnEy/" },
+    { label: "Publicação 2", url: "https://www.instagram.com/p/DRvUSSKjfMC/" },
+    { label: "Reel", url: "https://www.instagram.com/reels/DWomw-0jjej/" },
+  ],
   media: [
     {
       outlet: "Diário do Nordeste",

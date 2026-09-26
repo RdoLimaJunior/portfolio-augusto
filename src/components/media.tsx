@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { ArrowUpRight } from "lucide-react"
+import { LinkButton } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { site } from "@/data/site"
 
@@ -38,6 +39,35 @@ export function Media() {
                 </CardHeader>
               </Card>
             </a>
+          ))}
+        </div>
+
+        <h3 className="mb-4 mt-14 text-lg font-semibold">Mais na imprensa</h3>
+        <ul className="divide-y rounded-xl border bg-card">
+          {site.pressMore.map((m) => (
+            <li key={m.url}>
+              <a
+                href={m.url}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="flex items-start justify-between gap-4 px-5 py-3 text-sm transition-colors hover:bg-muted"
+              >
+                <span>
+                  <span className="font-semibold text-primary">{m.outlet}</span>
+                  <span className="text-muted-foreground"> · {m.title}</span>
+                </span>
+                <ArrowUpRight className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <h3 className="mb-4 mt-10 text-lg font-semibold">No Instagram</h3>
+        <div className="flex flex-wrap gap-3">
+          {site.instagramPosts.map((p) => (
+            <LinkButton key={p.url} variant="outline" href={p.url} target="_blank" rel="noreferrer noopener">
+              {p.label} <ArrowUpRight />
+            </LinkButton>
           ))}
         </div>
       </div>
