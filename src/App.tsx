@@ -1,7 +1,8 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
-import { Projects } from "@/components/projects"
+import { Achievements } from "@/components/achievements"
+import { Media } from "@/components/media"
 import { Contact } from "@/components/contact"
 
 export default function App() {
@@ -11,7 +12,8 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Projects />
+        <Achievements />
+        <Media />
         <Contact />
       </main>
       <footer className="border-t py-8 text-center text-sm text-muted-foreground">

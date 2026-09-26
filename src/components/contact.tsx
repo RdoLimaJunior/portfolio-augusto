@@ -4,11 +4,11 @@ import { site } from "@/data/site"
 
 export function Contact() {
   return (
-    <section id="contato" className="border-t bg-secondary/50">
+    <section id="contato" className="border-t">
       <div className="mx-auto max-w-5xl px-6 py-20">
         <h2 className="mb-4 text-2xl font-bold tracking-tight">Vamos conversar?</h2>
         <p className="mb-6 max-w-xl text-muted-foreground">
-          Quer saber mais sobre o {site.firstName}? Me siga no Instagram ou mande uma mensagem.
+          Quer saber mais sobre o {site.firstName}? Acompanhe a rotina de estudos e as competições no Instagram.
         </p>
         <div className="flex flex-wrap gap-3">
           <Button asChild>
