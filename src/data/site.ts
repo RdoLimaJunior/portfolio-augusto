@@ -32,16 +32,19 @@ export const site = {
   media: [
     {
       outlet: "Diário do Nordeste",
+      image: "https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3737677:1769615799/WhatsApp%20Image%202026-01-28%20at%2010.37.11.webp?f=16x9&h=720&w=1280",
       title: "Cearense conquista medalha em olimpíada internacional de ciências nos EUA",
       url: "https://diariodonordeste.verdesmares.com.br/ceara/crianca-superdotada-cearense-conquista-medalha-em-olimpiada-internacional-de-ciencias-nos-eua-1.3737673",
     },
     {
       outlet: "Correio Braziliense",
+      image: "https://midias.correiobraziliense.com.br/_midias/png/2026/01/30/675x450/1_img-2853-63810241.png",
       title: "Cearense recebe medalha em olimpíada científica nos EUA",
       url: "https://www.correiobraziliense.com.br/euestudante/educacao-basica/2026/01/7344578-cearense-de-8-anos-recebe-medalha-em-olimpiada-cientifica-nos-eua.html",
     },
     {
       outlet: "NE9",
+      image: "https://ne9.com.br/wp-content/uploads/2025/12/Crianca-Nordestina-superdotada-fot-rproducao.webp",
       title: "Cearense conquista medalha internacional de Ciências e se classifica para competição nos EUA",
       url: "https://ne9.com.br/cearense-de-8-anos-conquista-medalha-internacional-de-ciencias-e-se-classifica-para-competicao-nos-eua/",
     },
