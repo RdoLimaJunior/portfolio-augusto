@@ -29,9 +29,4 @@ export const site = {
     funds: ["Inscrições em olimpíadas", "Viagens e hospedagem em etapas nacionais e internacionais", "Materiais de estudo e preparação"],
     benefits: ["Logo da empresa no site", "Menção nas redes sociais do Augusto", "Atualizações sobre cada competição"],
   },
-  instagramPosts: [
-    { label: "Publicação 1", url: "https://www.instagram.com/p/DUD6bb2CnEy/" },
-    { label: "Publicação 2", url: "https://www.instagram.com/p/DRvUSSKjfMC/" },
-    { label: "Reel", url: "https://www.instagram.com/reels/DWomw-0jjej/" },
-  ],
 }

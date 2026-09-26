@@ -1,4 +1,14 @@
+/** site = matéria em portal/jornal/revista · video = reportagem ou reel · social = publicação em rede social */
+export type PressType = "site" | "video" | "social"
+
+export const pressTypeLabels: Record<PressType, string> = {
+  site: "Sites e jornais",
+  video: "Vídeos",
+  social: "Redes sociais",
+}
+
 export type PressItem = {
+  type: PressType
   outlet: string
   /** ano-mês, ex.: "2026-01" */
   date?: string
@@ -9,8 +19,9 @@ export type PressItem = {
 }
 
 // Da mais recente para a mais antiga.
-export const press: PressItem[] = [
+const items: PressItem[] = [
   {
+    type: "site",
     outlet: "Portal 6",
     date: "2026-08",
     title: "Aluno de escola pública vai aos EUA e conquista 3º lugar em competição internacional",
@@ -18,12 +29,14 @@ export const press: PressItem[] = [
     image: "https://portal6.com.br/wp-content/uploads/2026/08/821816-20260818-000916-0a2694.jpg",
   },
   {
+    type: "site",
     outlet: "Casa do Ceará",
     date: "2026-08",
     title: "Augusto de Paula Bezerra leva o Ceará ao pódio em olimpíada internacional de Ciências",
     url: "https://casadoceara.org.br/aos-8-anos-augusto-de-paula-bezerra-leva-o-ceara-ao-podio-em-olimpiada-internacional-de-ciencias/",
   },
   {
+    type: "site",
     outlet: "Revista Crescer",
     date: "2026-03",
     title: "Cearense conquista medalha em Olimpíada Internacional de Ciências, nos EUA",
@@ -31,12 +44,14 @@ export const press: PressItem[] = [
     image: "https://s2-crescer.glbimg.com/D-l1387gp4gX34QJziN57Td8-OM=/735x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_19863d4200d245c3a2ff5b383f548bb6/internal_photos/bs/2026/L/x/tSefTCSqmAK7FrBOmGVQ/captura-de-tela-2026-03-06-164432.png",
   },
   {
+    type: "site",
     outlet: "O Povo",
     date: "2026-02",
     title: "Cearense é premiado em olimpíada internacional",
     url: "https://mais.opovo.com.br/jornal/cidades/2026/02/02/aos-8-anos-cearense-superdotado-e-premiado-em-olimpiada-internacional.html",
   },
   {
+    type: "site",
     outlet: "Só Notícia Boa",
     date: "2026-02",
     title: "Brasileiro conquista medalha em olimpíada internacional de ciência",
@@ -44,6 +59,7 @@ export const press: PressItem[] = [
     image: "https://d281e75zdqqlon.cloudfront.net/wp-content/uploads/2026/01/elke-2026-01-30T071029.898.jpg",
   },
   {
+    type: "site",
     outlet: "NE9",
     date: "2026-02",
     title: "Nordestino conquista Olimpíada Internacional de Ciências nos EUA",
@@ -51,6 +67,7 @@ export const press: PressItem[] = [
     image: "https://ne9.com.br/wp-content/uploads/2026/02/Foto-arquivo-pessoal.webp",
   },
   {
+    type: "site",
     outlet: "Correio Braziliense",
     date: "2026-01",
     title: "Cearense recebe medalha em olimpíada científica nos EUA",
@@ -58,6 +75,7 @@ export const press: PressItem[] = [
     image: "https://midias.correiobraziliense.com.br/_midias/png/2026/01/30/675x450/1_img-2853-63810241.png",
   },
   {
+    type: "site",
     outlet: "Diário do Nordeste",
     date: "2026-01",
     title: "Cearense conquista medalha em olimpíada internacional de ciências nos EUA",
@@ -65,6 +83,7 @@ export const press: PressItem[] = [
     image: "https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3737677:1769615799/WhatsApp%20Image%202026-01-28%20at%2010.37.11.webp?f=16x9&h=720&w=1280",
   },
   {
+    type: "site",
     outlet: "Redenção News",
     date: "2026-01",
     title: "Aluno da rede pública de Baturité conquista medalha de bronze em olimpíada internacional de Ciências",
@@ -72,6 +91,7 @@ export const press: PressItem[] = [
     image: "https://redencaonews.com.br/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-29-at-09.27.27.jpeg",
   },
   {
+    type: "site",
     outlet: "César Macedo",
     date: "2026-01",
     title: "Cearense conquista medalha em olimpíada internacional de ciências nos EUA",
@@ -79,12 +99,14 @@ export const press: PressItem[] = [
     image: "https://cesarmacedo.com/wp-content/uploads/2026/01/8ba8489d-eb4b-4db8-b412-41fbbd4bc963.jpg",
   },
   {
+    type: "site",
     outlet: "Portal Tri",
     date: "2026-01",
     title: "Brasileiro conquista medalha em olimpíada internacional de ciência nos Estados Unidos",
     url: "https://www.portaltri.com.br/noticias/42870/brasileiro-de-8-anos-conquista-medalha-em-olimpiada-internacional-de-ciencia-nos-estados-unidos",
   },
   {
+    type: "site",
     outlet: "NE9",
     date: "2025-12",
     title: "Cearense conquista medalha internacional de Ciências e se classifica para competição nos EUA",
@@ -92,6 +114,7 @@ export const press: PressItem[] = [
     image: "https://ne9.com.br/wp-content/uploads/2025/12/Crianca-Nordestina-superdotada-fot-rproducao.webp",
   },
   {
+    type: "site",
     outlet: "URB News",
     date: "2025-12",
     title: "Governo do Ceará e Prefeitura de Baturité vão custear viagem de estudante para olimpíada nos EUA",
@@ -99,6 +122,7 @@ export const press: PressItem[] = [
     image: "https://urbnews.com.br/wp-content/uploads/2025/12/20251201-AUGUSTO-DE-PAULA-site.jpeg",
   },
   {
+    type: "site",
     outlet: "Diário do Nordeste",
     date: "2025-11",
     title: "Estudante se classifica em olimpíada nos EUA e família faz vaquinha para a viagem",
@@ -106,13 +130,55 @@ export const press: PressItem[] = [
     image: "https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3714224:1764371728/SaveClip.App_558861412_17845935132578203_6300784350797984360_n.webp?f=16x9&h=720&w=1280",
   },
   {
+    type: "video",
     outlet: "Jornal Jangadeiro",
     title: "Reportagem em vídeo (Facebook)",
     url: "https://www.facebook.com/jornaljangadeiro/videos/840600248753377/",
   },
   {
+    type: "social",
     outlet: "Razões para Acreditar",
     title: "Publicação sobre a conquista (Facebook)",
     url: "https://www.facebook.com/RazoesParaAcreditar/posts/o-pequeno-augusto-de-paula-bezerra-de-apenas-8-anos-encantou-o-mundo-ao-conquist/1233722912193503/",
   },
+  {
+    type: "social",
+    outlet: "Instagram",
+    title: "Publicação 1",
+    url: "https://www.instagram.com/p/DUD6bb2CnEy/",
+  },
+  {
+    type: "social",
+    outlet: "Instagram",
+    title: "Publicação 2",
+    url: "https://www.instagram.com/p/DRvUSSKjfMC/",
+  },
+  {
+    type: "video",
+    outlet: "Instagram",
+    title: "Reel",
+    url: "https://www.instagram.com/reels/DWomw-0jjej/",
+  },
 ]
+
+/** Normaliza a URL para detectar repetidos: sem www, sem utm_*, sem hash e sem barra final. */
+export function normalizeUrl(raw: string) {
+  try {
+    const u = new URL(raw)
+    for (const k of [...u.searchParams.keys()]) if (k.startsWith("utm_")) u.searchParams.delete(k)
+    u.hash = ""
+    const path = u.pathname.replace(/\/+$/, "")
+    return `${u.hostname.replace(/^www\./, "")}${path}${u.search}`.toLowerCase()
+  } catch {
+    return raw.trim().toLowerCase()
+  }
+}
+
+// Itens repetidos (mesma URL) são descartados; vale o primeiro da lista.
+const seen = new Set<string>()
+export const press: PressItem[] = items.filter((i) => {
+  const key = normalizeUrl(i.url)
+  if (seen.has(key)) return false
+  seen.add(key)
+  return true
+})

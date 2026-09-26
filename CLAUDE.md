@@ -16,6 +16,7 @@ Conseguir patrocínio privado para as olimpíadas científicas do Augusto, atrai
 
 ## Convenções
 - Todo o conteúdo editável (textos, projetos, links) fica em `src/data/site.ts`. Os textos atuais são PROVISÓRIOS.
+- Catálogo de imprensa em `src/data/press.ts` (mais recente primeiro). Cada item tem `type`: `site` | `video` | `social`, `outlet`, `title` (neutro: sem "superdotado"/idade), `url`, e opcionais `date` ("2026-01") e `image` (miniatura oficial da matéria; nunca imagem gerada por IA). URLs repetidas são descartadas automaticamente (`normalizeUrl` ignora www, utm_*, hash e barra final). Ao importar uma curadoria em .md: normalizar URL, checar se abre (HTTP 200), buscar og:title/og:image, classificar o tipo e só então adicionar.
 - Alias `@/` aponta para `src/`.
 - Novos componentes shadcn: `npx shadcn@latest add <componente>` (já existe `components.json`).
 - Site em português (pt-BR).
