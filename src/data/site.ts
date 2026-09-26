@@ -17,5 +17,21 @@ export const site = {
     { title: "Olimpíadas de inglês", description: "SMETA e OBLI, olimpíadas de língua inglesa.", tag: "2025" },
     { title: "Linguagens, tecnologia e ciências", description: "Destaques e premiações em outras competições do conhecimento.", tag: "2025" },
   ],
-  media: ["Diário do Nordeste", "Correio Braziliense", "O Povo"],
+  media: [
+    {
+      outlet: "Diário do Nordeste",
+      title: "Cearense conquista medalha em olimpíada internacional de ciências nos EUA",
+      url: "https://diariodonordeste.verdesmares.com.br/ceara/crianca-superdotada-cearense-conquista-medalha-em-olimpiada-internacional-de-ciencias-nos-eua-1.3737673",
+    },
+    {
+      outlet: "Correio Braziliense",
+      title: "Cearense recebe medalha em olimpíada científica nos EUA",
+      url: "https://www.correiobraziliense.com.br/euestudante/educacao-basica/2026/01/7344578-cearense-de-8-anos-recebe-medalha-em-olimpiada-cientifica-nos-eua.html",
+    },
+    {
+      outlet: "NE9",
+      title: "Cearense conquista medalha internacional de Ciências e se classifica para competição nos EUA",
+      url: "https://ne9.com.br/cearense-de-8-anos-conquista-medalha-internacional-de-ciencias-e-se-classifica-para-competicao-nos-eua/",
+    },
+  ],
 }
