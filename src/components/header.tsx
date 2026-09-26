@@ -4,7 +4,7 @@ const links = [
   { href: "#sobre", label: "Sobre" },
   { href: "#olimpiadas", label: "Olimpíadas" },
   { href: "#midia", label: "Na mídia" },
-  { href: "#contato", label: "Contato" },
+  { href: "#apoie", label: "Apoie" },
 ]
 
 export function Header() {

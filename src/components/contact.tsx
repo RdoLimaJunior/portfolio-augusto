@@ -1,26 +1,24 @@
 import { ExternalLink, Mail } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { LinkButton } from "@/components/ui/button"
 import { site } from "@/data/site"
 
 export function Contact() {
   return (
     <section id="contato" className="border-t">
       <div className="mx-auto max-w-5xl px-6 py-20">
-        <h2 className="mb-4 text-2xl font-bold tracking-tight">Vamos conversar?</h2>
+        <h2 className="mb-4 text-2xl font-bold tracking-tight">Sua empresa acredita na educação?</h2>
         <p className="mb-6 max-w-xl text-muted-foreground">
-          Quer saber mais sobre o {site.firstName}? Acompanhe a rotina de estudos e as competições no Instagram.
+          Fale com a família do {site.firstName} e conheça as formas de apoiar. Acompanhe também a rotina de estudos e as competições no Instagram.
         </p>
         <div className="flex flex-wrap gap-3">
-          <Button asChild>
-            <a href={site.instagram} target="_blank" rel="noreferrer noopener">
-              Instagram <ExternalLink />
-            </a>
-          </Button>
           {site.email && (
-            <Button variant="outline" asChild>
-              <a href={`mailto:${site.email}`}><Mail /> E-mail</a>
-            </Button>
+            <LinkButton href={`mailto:${site.email}`}>
+              <Mail /> Falar sobre patrocínio
+            </LinkButton>
           )}
+          <LinkButton variant={site.email ? "outline" : "default"} href={site.instagram} target="_blank" rel="noreferrer noopener">
+            Instagram <ExternalLink />
+          </LinkButton>
         </div>
       </div>
     </section>

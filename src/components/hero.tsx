@@ -1,5 +1,5 @@
-import { ArrowDown } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { ArrowDown, Heart } from "lucide-react"
+import { LinkButton } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { site } from "@/data/site"
 
@@ -11,13 +11,13 @@ export function Hero() {
         Oi, eu sou o <span className="text-primary">{site.firstName}</span>.
       </h1>
       <p className="max-w-2xl text-lg text-muted-foreground">{site.tagline}</p>
-      <div className="flex gap-3">
-        <Button size="lg" asChild>
-          <a href="#olimpiadas">Ver olimpíadas <ArrowDown /></a>
-        </Button>
-        <Button size="lg" variant="outline" asChild>
-          <a href="#contato">Contato</a>
-        </Button>
+      <div className="flex flex-wrap gap-3">
+        <LinkButton size="lg" href="#apoie">
+          <Heart /> Quero apoiar
+        </LinkButton>
+        <LinkButton size="lg" variant="outline" href="#olimpiadas">
+          Ver olimpíadas <ArrowDown />
+        </LinkButton>
       </div>
     </section>
   )

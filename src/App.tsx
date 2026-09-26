@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Olympiads } from "@/components/olympiads"
 import { Media } from "@/components/media"
+import { Sponsor } from "@/components/sponsor"
 import { Contact } from "@/components/contact"
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
         <About />
         <Olympiads />
         <Media />
+        <Sponsor />
         <Contact />
       </main>
       <footer className="border-t py-8 text-center text-sm text-muted-foreground">
