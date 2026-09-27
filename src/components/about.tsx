@@ -1,34 +1,51 @@
-import { Badge } from "@/components/ui/badge"
+import { PhotoWall } from "@/components/photo-wall"
+import { Reveal } from "@/components/reveal"
 import { site } from "@/data/site"
+
+const chip = [
+  "bg-sky-200 text-sky-950",
+  "bg-amber-200 text-amber-950",
+  "bg-emerald-200 text-emerald-950",
+  "bg-rose-200 text-rose-950",
+  "bg-violet-200 text-violet-950",
+  "bg-orange-200 text-orange-950",
+  "bg-indigo-200 text-indigo-950",
+]
 
 export function About() {
   const { about } = site
   return (
-    <section id="sobre" className="border-t bg-secondary/50">
+    <section id="sobre" className="bg-dots">
       <div className="mx-auto max-w-5xl px-4 py-14 md:py-20">
-        <h2 className="mb-4 text-3xl font-bold tracking-tight">Sobre mim</h2>
-        <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">{about.intro}</p>
-        <div className="mt-5 flex flex-wrap gap-2">
-          {site.interests.map((i) => (
-            <Badge key={i}>{i}</Badge>
-          ))}
-        </div>
+        <Reveal>
+          <h2 className="mb-4 text-3xl font-extrabold tracking-tight md:text-4xl">
+            Sobre mim <span className="inline-block animate-wiggle">✨</span>
+          </h2>
+          <p className="max-w-2xl text-lg leading-relaxed text-indigo-950/80">{about.intro}</p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {site.interests.map((i, n) => (
+              <span key={i} className={`rounded-full px-4 py-1.5 text-sm font-bold shadow-sm ${chip[n % chip.length]}`}>
+                {i}
+              </span>
+            ))}
+          </div>
+        </Reveal>
 
-        <h3 className="mb-3 mt-12 text-xl font-semibold">{about.houstonTitle}</h3>
-        <div className="max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground">
-          {about.houston.map((p) => (
-            <p key={p}>{p}</p>
-          ))}
-        </div>
+        <Reveal>
+          <div className="mt-12 rounded-3xl border-4 border-sky-300 bg-sky-100 p-6 sm:p-8">
+            <h3 className="mb-3 text-xl font-extrabold">{about.houstonTitle} 🚀</h3>
+            <div className="max-w-2xl space-y-4 text-lg leading-relaxed text-indigo-950/80">
+              {about.houston.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
+            </div>
+          </div>
+        </Reveal>
 
-        <div className="-mx-4 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible lg:grid-cols-4 sm:px-0">
-          {site.gallery.map((g) => (
-            <figure key={g.src} className="w-[75%] shrink-0 snap-center sm:w-auto">
-              <img src={g.src} alt={g.alt} loading="lazy" className="aspect-[3/4] w-full rounded-2xl object-cover shadow-sm" />
-              <figcaption className="mt-2 text-sm text-muted-foreground">{g.caption}</figcaption>
-            </figure>
-          ))}
-        </div>
+        <Reveal>
+          <h3 className="mb-4 mt-12 text-xl font-extrabold">Momentos 📸</h3>
+          <PhotoWall photos={site.gallery} />
+        </Reveal>
       </div>
     </section>
   )

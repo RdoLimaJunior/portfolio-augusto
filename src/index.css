@@ -7,19 +7,19 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.153 0.006 107.1);
+  --background: oklch(0.985 0.02 95);
+  --foreground: oklch(0.25 0.08 268);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.153 0.006 107.1);
-  --primary: oklch(0.527 0.154 150.069);
-  --primary-foreground: oklch(0.982 0.018 155.826);
-  --secondary: oklch(0.967 0.001 286.375);
-  --secondary-foreground: oklch(0.21 0.006 285.885);
-  --muted: oklch(0.966 0.005 106.5);
-  --muted-foreground: oklch(0.58 0.031 107.3);
-  --accent: oklch(0.966 0.005 106.5);
-  --accent-foreground: oklch(0.228 0.013 107.4);
-  --border: oklch(0.93 0.007 106.5);
+  --card-foreground: oklch(0.25 0.08 268);
+  --primary: oklch(0.52 0.16 150);
+  --primary-foreground: oklch(0.99 0.01 150);
+  --secondary: oklch(0.95 0.07 95);
+  --secondary-foreground: oklch(0.25 0.08 268);
+  --muted: oklch(0.96 0.03 95);
+  --muted-foreground: oklch(0.45 0.05 268);
+  --accent: oklch(0.87 0.17 92);
+  --accent-foreground: oklch(0.25 0.08 268);
+  --border: oklch(0.9 0.04 95);
   --ring: oklch(0.737 0.021 106.9);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.153 0.006 107.1);
@@ -117,9 +117,52 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+@theme {
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-wiggle: wiggle 2.4s ease-in-out infinite;
+  --animate-twinkle: twinkle 3s ease-in-out infinite;
+  --animate-fly: fly 16s linear infinite;
+  --animate-marquee: marquee 28s linear infinite;
+  --animate-pop: pop 2.2s ease-in-out infinite;
+  --animate-spin-slow: spin 24s linear infinite;
+}
+
+@keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(6deg); } }
+@keyframes wiggle { 0%, 100% { transform: rotate(-10deg); } 50% { transform: rotate(14deg); } }
+@keyframes twinkle { 0%, 100% { opacity: 0.25; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1.15); } }
+@keyframes fly { 0% { transform: translate(-15vw, 40px) rotate(-8deg); } 100% { transform: translate(115vw, -40px) rotate(-8deg); } }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes pop { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+
+/* Aparecer ao rolar (só com JS e sem "reduzir movimento") */
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal { opacity: 0; transform: translateY(28px) scale(0.98); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); transition-delay: var(--reveal-delay, 0ms); }
+  .js .reveal.is-visible { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* Texturas */
+.bg-dots { background-image: radial-gradient(oklch(0.52 0.16 150 / 0.18) 2px, transparent 2px); background-size: 22px 22px; }
+.bg-stars {
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+    radial-gradient(2px 2px at 90px 80px, #fde68a, transparent),
+    radial-gradient(1.5px 1.5px at 150px 20px, #fff, transparent),
+    radial-gradient(2px 2px at 60px 140px, #bae6fd, transparent),
+    radial-gradient(1.5px 1.5px at 190px 120px, #fff, transparent);
+  background-size: 220px 180px;
+}
+.squiggle { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8' viewBox='0 0 24 8'%3E%3Cpath d='M0 4 Q6 0 12 4 T24 4' fill='none' stroke='%23fbbf24' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left bottom / 24px 8px; padding-bottom: 0.3em; }
+
 @layer base {
   * { @apply border-border outline-ring/50; }
   html { scroll-behavior: smooth;
     @apply font-sans; }
   body { @apply antialiased bg-background text-foreground; font-family: ui-sans-serif, system-ui, sans-serif; }
 }
+/* Linha de voo tracejada que "anda" */
+@keyframes dash { to { stroke-dashoffset: -48; } }
+.arc-dash { stroke-dasharray: 8 8; animation: dash 1.6s linear infinite; }

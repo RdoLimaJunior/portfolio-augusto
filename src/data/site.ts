@@ -15,6 +15,8 @@ export const site = {
     ],
   },
   interests: ["Astronomia", "Química", "Física", "Biologia", "Inglês", "Violino", "Olimpíadas"],
+  // Veículos que já contaram a história (só os confirmados pelos links de press.ts).
+  seenIn: ["Correio Braziliense", "Diário do Nordeste", "O Povo", "Revista Crescer"],
   instagram: "https://www.instagram.com/augustodpb/",
   instagramDm: "https://ig.me/m/augustodpb",
 
@@ -26,6 +28,33 @@ export const site = {
   // Foto principal (faixa larga no topo). Arquivos em public/img/.
   photo: "/img/augusto-capa.jpg",
   photoAlt: "Augusto deitado, sorrindo, rodeado de livros de ciências",
+
+  // MAPAS. Os pins usam emoji (🥇 ouro, 🥈 prata, 🥉 bronze). Para adicionar um local, acrescente um item com lat/lon.
+  // O pin de casa fica em nível de estado (Ceará), sem endereço.
+  mapPins: {
+    home: { id: "ceara", label: "Ceará, Brasil", detail: "De onde eu saio.", lat: -4.33, lon: -38.88, emoji: "🏠" },
+    next: {
+      id: "tashkent",
+      label: "Tashkent, Uzbequistão",
+      detail: "Final Global do STEAM AHEAD 2026, de 11 a 16 de dezembro.",
+      lat: 41.3,
+      lon: 69.24,
+      emoji: "✈️",
+      pulse: true,
+    },
+    // Onde já competi. Locais das etapas nacionais/online: me diga cidade e medalha de cada uma e eu coloco no mapa.
+    competed: [
+      { id: "houston", label: "Houston, EUA", detail: "Copernicus Global Round 2026, na Universidade Rice: medalha de bronze.", lat: 29.76, lon: -95.37, emoji: "🥉" },
+      {
+        id: "brasil",
+        label: "Brasil (etapas nacionais e online)",
+        detail: "Torneio Brasileiro de Ciências: bronze. Também OBA, OBLI, SMETA, Linguagens e Tecnologia, em 2025.",
+        lat: -12,
+        lon: -52,
+        emoji: "🥉",
+      },
+    ],
+  },
 
   // Momentos (fotos em public/img/). Sem metadados; sem brasão de escola; sem outras crianças identificáveis.
   gallery: [
@@ -43,6 +72,7 @@ export const site = {
     title: "Final Global do STEAM AHEAD 2026",
     place: "Tashkent, Uzbequistão",
     date: "11 a 16 de dezembro de 2026",
+    startsOn: "2026-12-11",
     text: "O STEAM AHEAD é uma das competições acadêmicas internacionais mais respeitadas e reúne cinco grandes olimpíadas globais, com provas de matemática, ciências, cibersegurança, informática e artes. Participar da etapa presencial parece algo distante, mas sigo sonhando em estar lá.",
     stats: [
       { value: "30+", label: "países participantes" },
@@ -60,8 +90,8 @@ export const site = {
   },
   olympiadsTitle: "Em 2025, meu primeiro ano competindo",
   olympiads: [
-    { title: "Copernicus Natural Science (etapa online)", description: "Medalha de bronze e classificação para a etapa internacional, em Houston.", tag: "2025" },
-    { title: "Torneio Brasileiro de Ciências", description: "Participei e ganhei medalha de bronze. 🥉", tag: "2025" },
+    { title: "Copernicus Natural Science (etapa online)", description: "Medalha de bronze e classificação para a etapa internacional, em Houston.", tag: "2025", medal: true },
+    { title: "Torneio Brasileiro de Ciências", description: "Participei e ganhei medalha de bronze.", tag: "2025", medal: true },
     { title: "OBA", description: "Olimpíada Brasileira de Astronomia e Astronáutica.", tag: "2025" },
     { title: "OBLI", description: "Olimpíada Brasileira de Língua Inglesa.", tag: "2025" },
     { title: "SMETA Olympiads of English", description: "Olimpíada de língua inglesa.", tag: "2025" },

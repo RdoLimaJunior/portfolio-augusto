@@ -27,13 +27,18 @@ function Thumb({ item }: { item: PressItem }) {
           alt={`Imagem da matéria do ${item.outlet}`}
           loading="lazy"
           onError={() => setFailed(true)}
-          className="absolute inset-0 size-full object-cover"
+          className="absolute inset-0 size-full object-cover object-[50%_30%]"
         />
       ) : (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 text-center text-muted-foreground">
           <Icon className="size-10" />
           <span className="font-semibold">{item.outlet}</span>
         </div>
+      )}
+      {hasImage && (
+        <span className="absolute bottom-2 left-2 rounded-full bg-black/60 px-2.5 py-1 text-[11px] font-medium text-white">
+          Imagem: {item.outlet}
+        </span>
       )}
     </div>
   )
@@ -69,9 +74,9 @@ export function Media() {
   }, [api])
 
   return (
-    <section id="midia" className="border-t bg-secondary/50">
+    <section id="midia" className="bg-sky-100">
       <div className="mx-auto max-w-5xl px-4 py-14 md:py-20">
-        <h2 className="mb-2 text-3xl font-bold tracking-tight">Na imprensa</h2>
+        <h2 className="mb-2 text-3xl font-extrabold tracking-tight md:text-4xl">Na imprensa 📰</h2>
         <p className="mb-6 text-muted-foreground">
           Reportagens, vídeos e publicações que contaram a trajetória do {site.firstName}.
         </p>
@@ -100,7 +105,7 @@ export function Media() {
                 return (
                   <CarouselItem key={m.url} className="basis-full">
                     <a href={m.url} target="_blank" rel="noreferrer noopener" className="group block">
-                      <Card className="grid gap-0 overflow-hidden py-0 transition-shadow group-hover:shadow-md md:grid-cols-2">
+                      <Card className="grid gap-0 overflow-hidden rounded-3xl border-4 border-white py-0 shadow-md transition-transform group-hover:-translate-y-1 group-hover:shadow-xl md:grid-cols-2">
                         <Thumb item={m} />
                         <div className="flex flex-col justify-center gap-3 p-6 md:p-10">
                           <div className="flex flex-wrap items-center gap-2 text-sm">

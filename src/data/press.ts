@@ -14,7 +14,7 @@ export type PressItem = {
   date?: string
   title: string
   url: string
-  /** só imagem própria, hospedada aqui (ex.: "/img/matéria-x.jpg"); nunca link externo */
+  /** imagem da matéria, baixada e guardada aqui em /img/imprensa/ (nunca link externo). Crédito automático: o veículo. */
   image?: string
 }
 
@@ -26,6 +26,7 @@ const rawItems: PressItem[] = [
     date: "2026-08",
     title: "Aluno de escola pública vai aos EUA e conquista 3º lugar em competição internacional",
     url: "https://portal6.com.br/2026/08/18/aos-8-anos-aluno-de-escola-publica-no-interior-do-brasil-vai-aos-eua-e-conquista-3o-lugar-em-competicao-internacional-com-jovens-superdotados-de-todo-o-mundo/",
+    image: "/img/imprensa/01-portal-6-2026-08.jpg",
   },
   {
     type: "site",
@@ -33,6 +34,7 @@ const rawItems: PressItem[] = [
     date: "2026-08",
     title: "Estudante cearense enfrenta prova internacional de ciências nos EUA e conquista medalha de bronze",
     url: "https://clickpetroleoegas.com.br/aos-8-anos-e-ainda-sem-os-dentes-da-frente-menino-superdotado-de-escola-publica-rural-do-ceara-enfrenta-prova-internacional-de-quimica-fisica-biologia-e-astronomia-nos-eua-conquista-m-asaf04/",
+    image: "/img/imprensa/02-click-petr-leo-e-g-s-2026-08.jpg",
   },
   {
     type: "site",
@@ -47,6 +49,7 @@ const rawItems: PressItem[] = [
     date: "2026-03",
     title: "Cearense conquista medalha em Olimpíada Internacional de Ciências, nos EUA",
     url: "https://revistacrescer.globo.com/maes-e-pais/historias/noticia/2026/03/aos-8-cearense-conquista-medalha-em-olimpiada-internacional-de-ciencias-nos-eua.ghtml",
+    image: "/img/imprensa/04-revista-crescer-2026-03.jpg",
   },
   {
     type: "site",
@@ -54,6 +57,7 @@ const rawItems: PressItem[] = [
     date: "2026-02",
     title: "Nordestino conquista Olimpíada Internacional de Ciências nos EUA",
     url: "https://ne9.com.br/nordestino-de-8-anos-conquista-olimpiada-internacional-de-ciencias-nos-eua/",
+    image: "/img/imprensa/05-ne9-2026-02.jpg",
   },
   {
     type: "site",
@@ -61,6 +65,7 @@ const rawItems: PressItem[] = [
     date: "2026-01",
     title: "Cearense recebe medalha em olimpíada científica nos EUA",
     url: "https://www.correiobraziliense.com.br/euestudante/educacao-basica/2026/01/7344578-cearense-de-8-anos-recebe-medalha-em-olimpiada-cientifica-nos-eua.html",
+    image: "/img/imprensa/06-correio-braziliense-2026-01.jpg",
   },
   {
     type: "site",
@@ -68,6 +73,7 @@ const rawItems: PressItem[] = [
     date: "2026-01",
     title: "Cearense conquista medalha em olimpíada internacional de ciências nos EUA",
     url: "https://diariodonordeste.verdesmares.com.br/ceara/crianca-superdotada-cearense-conquista-medalha-em-olimpiada-internacional-de-ciencias-nos-eua-1.3737673",
+    image: "/img/imprensa/07-di-rio-do-nordeste-2026-01.jpg",
   },
   {
     type: "site",
@@ -75,6 +81,7 @@ const rawItems: PressItem[] = [
     date: "2026-01",
     title: "Aluno da rede pública de Baturité conquista medalha de bronze em olimpíada internacional de Ciências",
     url: "https://redencaonews.com.br/2026/01/aluno-da-rede-publica-de-baturite-conquista-medalha-de-bronze-em-olimpiada-internacional-de-ciencias-no-eua/",
+    image: "/img/imprensa/08-reden-o-news-2026-01.jpg",
   },
   {
     type: "site",
@@ -96,6 +103,7 @@ const rawItems: PressItem[] = [
     date: "2025-12",
     title: "Cearense conquista medalha internacional de Ciências e se classifica para competição nos EUA",
     url: "https://ne9.com.br/cearense-de-8-anos-conquista-medalha-internacional-de-ciencias-e-se-classifica-para-competicao-nos-eua/",
+    image: "/img/imprensa/11-ne9-2025-12.jpg",
   },
   {
     type: "site",
@@ -103,6 +111,7 @@ const rawItems: PressItem[] = [
     date: "2025-11",
     title: "Estudante se classifica em olimpíada nos EUA e família faz vaquinha para a viagem",
     url: "https://diariodonordeste.verdesmares.com.br/ceara/crianca-superdotada-do-ce-se-classifica-em-olimpiada-nos-eua-e-familia-faz-vaquinha-para-viagem-1.3714210",
+    image: "/img/imprensa/12-di-rio-do-nordeste-2025-11.jpg",
   },
   {
     type: "site",
@@ -138,6 +147,7 @@ const rawItems: PressItem[] = [
     date: "2025-12",
     title: "Governo do Ceará e Prefeitura vão custear a viagem do estudante à olimpíada nos EUA",
     url: "https://diariodonordeste.verdesmares.com.br/ceara/crianca-superdotada-tera-viagem-a-olimpiada-nos-eua-paga-pelo-governo-do-ce-e-prefeitura-de-baturite-1.3714751",
+    image: "/img/imprensa/17-di-rio-do-nordeste-2025-12.jpg",
   },
   {
     type: "video",

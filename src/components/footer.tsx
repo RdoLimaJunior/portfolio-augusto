@@ -1,16 +1,21 @@
+import { ShieldCheck } from "lucide-react"
 import { site } from "@/data/site"
 
 export function Footer() {
   return (
-    <footer className="border-t bg-secondary/50">
-      <div className="mx-auto max-w-3xl px-4 py-10">
-        <h2 className="mb-3 text-sm font-semibold">Sobre este site</h2>
-        <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+    <footer className="bg-indigo-950 text-indigo-100">
+      <div className="mx-auto max-w-3xl px-4 py-12">
+        <h2 className="mb-4 flex items-center gap-2 text-base font-extrabold text-white">
+          <ShieldCheck className="size-5 text-emerald-400" /> Sobre este site
+        </h2>
+        <ul className="space-y-2 text-sm leading-relaxed">
           {site.privacy.map((p) => (
             <li key={p}>{p}</li>
           ))}
         </ul>
-        <p className="mt-6 text-xs text-muted-foreground">© {new Date().getFullYear()} {site.name}</p>
+        <p className="mt-8 text-xs text-indigo-300">
+          © {new Date().getFullYear()} {site.name}
+        </p>
       </div>
     </footer>
   )
