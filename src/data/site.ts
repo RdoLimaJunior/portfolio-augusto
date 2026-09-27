@@ -21,6 +21,7 @@ export const site = {
 
   // Foto principal (faixa larga no topo). Arquivos em public/img/.
   photo: "/img/augusto-capa.jpg",
+  avatar: "/img/augusto-medalha.jpg",
   photoAlt: "Augusto deitado, sorrindo, rodeado de livros de ciências",
 
   // MAPAS. Os pins usam emoji (🥇 ouro, 🥈 prata, 🥉 bronze). Para adicionar um local, acrescente um item com lat/lon.
@@ -106,11 +107,9 @@ export const site = {
 
   // Sobre este site (privacidade). Só mantenha estas frases enquanto forem verdadeiras.
   privacy: [
-    "Este site é mantido pela família do Augusto, que responde pelo conteúdo e pela imagem dele.",
-    "Não usamos cookies, anúncios nem rastreadores, e não coletamos dados de quem visita.",
-    "Por segurança, não divulgamos escola, endereço ou outros dados pessoais.",
-    "A conversa pelo WhatsApp é sempre com os responsáveis.",
-    "Quem quiser conversar fala diretamente com os responsáveis.",
-    "As matérias pertencem aos veículos de imprensa e abrem nos sites deles.",
+    "Site mantido pela família, que responde pelo conteúdo e pela imagem dele.",
+    "Sem cookies, anúncios ou rastreadores. Não divulgamos escola, endereço ou dados pessoais.",
+    "A conversa é sempre com os responsáveis.",
+    "As matérias pertencem aos veículos de imprensa.",
   ],
 }
