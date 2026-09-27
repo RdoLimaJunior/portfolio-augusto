@@ -49,12 +49,16 @@ Portfólio olímpico: vivo e colorido (verde e amarelo do Brasil, azul-céu, cor
 - Site no ar (Vercel, conta limajunior83-5590): **https://portfolio-augusto-tau.vercel.app**. Atenção: `portfolio-augusto.vercel.app` (sem `-tau`) é de OUTRA pessoa. O endereço com `-limajunior83-5590s-projects` exige login no Vercel.
 - Cada `git push` na branch `main` publica sozinho (GitHub ligado ao Vercel). Publicar à mão: `vercel --prod --yes`.
 
+## Página para a imprensa
+- `/imprensa` (`pages/press-kit.tsx`, conteúdo em `data/press-kit.ts`): nota à imprensa, fatos, biografias, fotos para baixar, regras de uso da imagem e cobertura. Só fatos já publicados ou informados pela família; a única citação é do post do próprio Augusto no Instagram (não inventar falas). Sem idade, escola, cidade ou diagnóstico. A foto da família NÃO entra nos downloads.
+- Roteamento simples por `window.location.pathname` em `App.tsx` (o Vercel devolve `index.html` para `/imprensa`).
+
 ## Pré-lançamento
 - O site está com `noindex` (em `index.html`) e `public/robots.txt` com `Disallow: /`, para o Google não listar enquanto a família revisa. NA HORA DE LANÇAR: remover a meta `robots` e trocar o robots.txt por `Allow: /`.
 
 ## Estado
 - [x] Home: hero, sobre, olimpíadas, na mídia, apoie (patrocínio), contato
-- [ ] WhatsApp/e-mail em `site.whatsapp`/`site.email` (sem eles, o botão cai no Instagram DM)
+- [x] WhatsApp dos responsáveis em `site.whatsapp` (parcerias e imprensa, com mensagens prontas em `lib/contact.ts`)
 - [ ] Publicações do Instagram: trocar "Publicação 1/2" e "Reel" em `press.ts` pelas legendas reais
 - [ ] Conteúdo real (bio, interesses, projetos, fotos)
 - [ ] Back-end: galeria de projetos e formulário de contato no Neon

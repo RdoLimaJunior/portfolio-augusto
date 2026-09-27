@@ -13,7 +13,12 @@ export function Footer() {
             <li key={p}>{p}</li>
           ))}
         </ul>
-        <p className="mt-8 text-xs text-indigo-300">
+        <p className="mt-6 text-sm">
+          <a href="/imprensa" className="font-bold text-amber-300 hover:text-amber-200">
+            Para a imprensa: nota, fatos e fotos
+          </a>
+        </p>
+        <p className="mt-6 text-xs text-indigo-300">
           © {new Date().getFullYear()} {site.name}
         </p>
       </div>

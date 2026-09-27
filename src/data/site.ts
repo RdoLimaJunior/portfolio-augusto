@@ -16,7 +16,7 @@ export const site = {
 
   // CONTATO: preencha assim que tiver (só números no WhatsApp, com DDI e DDD: "5585999999999").
   // A conversa é sempre com os responsáveis. Enquanto estiverem vazios, o site oferece o Instagram.
-  whatsapp: "",
+  whatsapp: "5585999935789",
   email: "",
 
   // Foto principal (faixa larga no topo). Arquivos em public/img/.
@@ -108,6 +108,7 @@ export const site = {
     "Este site é mantido pela família do Augusto, que responde pelo conteúdo e pela imagem dele.",
     "Não usamos cookies, anúncios nem rastreadores, e não coletamos dados de quem visita.",
     "Por segurança, não divulgamos escola, endereço ou outros dados pessoais.",
+    "O WhatsApp é o número dos responsáveis, usado só para parcerias e imprensa.",
     "Quem quiser conversar fala diretamente com os responsáveis.",
     "As matérias pertencem aos veículos de imprensa e abrem nos sites deles.",
   ],
