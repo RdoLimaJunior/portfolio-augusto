@@ -44,6 +44,11 @@ Portfólio olímpico: vivo e colorido (verde e amarelo do Brasil, azul-céu, cor
 - Não inventar fatos sobre o Augusto nem publicar dados pessoais (endereço, escola, telefone, data de nascimento completa) sem o responsável aprovar.
 - Instagram: https://www.instagram.com/augustodpb/
 
+## Publicação
+- Repositório (privado): https://github.com/RdoLimaJunior/portfolio-augusto
+- Site no ar (Vercel, conta limajunior83-5590): **https://portfolio-augusto-tau.vercel.app**. Atenção: `portfolio-augusto.vercel.app` (sem `-tau`) é de OUTRA pessoa. O endereço com `-limajunior83-5590s-projects` exige login no Vercel.
+- Cada `git push` na branch `main` publica sozinho (GitHub ligado ao Vercel). Publicar à mão: `vercel --prod --yes`.
+
 ## Pré-lançamento
 - O site está com `noindex` (em `index.html`) e `public/robots.txt` com `Disallow: /`, para o Google não listar enquanto a família revisa. NA HORA DE LANÇAR: remover a meta `robots` e trocar o robots.txt por `Allow: /`.
 
