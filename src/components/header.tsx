@@ -1,7 +1,8 @@
 import { site } from "@/data/site"
 
 const links = [
-  { href: "#sobre", label: "Sobre" },
+  { href: "#desafio", label: "Desafio" },
+  { href: "#sobre", label: "Sobre", hideOnMobile: true },
   { href: "#olimpiadas", label: "Olimpíadas" },
   { href: "#midia", label: "Imprensa" },
   { href: "#apoie", label: "Convite" },
@@ -16,7 +17,11 @@ export function Header() {
         </a>
         <nav className="flex gap-3 overflow-x-auto text-sm text-muted-foreground md:gap-6">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="whitespace-nowrap no-underline transition-colors hover:text-foreground">
+            <a
+              key={l.href}
+              href={l.href}
+              className={`whitespace-nowrap no-underline transition-colors hover:text-foreground ${l.hideOnMobile ? "hidden sm:inline" : ""}`}
+            >
               {l.label}
             </a>
           ))}

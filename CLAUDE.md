@@ -8,6 +8,7 @@ Conseguir patrocínio privado para as olimpíadas científicas do Augusto, atrai
 ## Público e tom
 - Quem decide é um empresário, geralmente no celular: **mobile-first** (testar em 375px; botões de 48px; sem rolagem horizontal).
 - O site é um **convite humilde da família**, não uma página de vendas. Nada de funil, contadores, "o que sua empresa recebe", passos, FAQ comercial, botão fixo repetido ou contrapartidas de marca. Augusto fala em primeira pessoa (hero, sobre, olimpíadas); a família fala em "nós" (convite e contato).
+- Campanha em andamento: o bloco "O próximo desafio" (`components/challenge.tsx`, fundo verde) vem logo depois da abertura e antes do "Sobre mim", com um único botão "Quero ajudar o Augusto" para o contato. Os dados estão em `site.challenge`.
 - O desafio atual: Final Global do STEAM AHEAD 2026, Tashkent (Uzbequistão), 11 a 16/12/2026. Ele sonha em ir à etapa presencial. Nunca prometer valores, cotas, benefícios fiscais ou retorno para a empresa sem a família confirmar.
 
 ## Conformidade (LGPD, ECA e ECA Digital: Augusto é criança)

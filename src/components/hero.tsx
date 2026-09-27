@@ -32,7 +32,7 @@ export function Hero() {
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{site.tagline}</p>
         <div className="mt-6 flex justify-center">
-          <LinkButton variant="outline" size="lg" href="#olimpiadas" className="h-12 px-6 text-base">
+          <LinkButton variant="outline" size="lg" href="#desafio" className="h-12 px-6 text-base">
             Conheça minha história <ArrowDown />
           </LinkButton>
         </div>

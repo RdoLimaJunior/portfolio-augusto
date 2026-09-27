@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
+import { Challenge } from "@/components/challenge"
 import { About } from "@/components/about"
 import { Olympiads } from "@/components/olympiads"
 import { Media } from "@/components/media"
@@ -13,6 +14,7 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <Challenge />
         <About />
         <Olympiads />
         <Media />

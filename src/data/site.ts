@@ -38,10 +38,18 @@ export const site = {
 
   // Próximo desafio (o motivo do convite)
   challenge: {
+    kicker: "O próximo desafio",
+    headline: "Fui selecionado para representar o Brasil!",
     title: "Final Global do STEAM AHEAD 2026",
     place: "Tashkent, Uzbequistão",
     date: "11 a 16 de dezembro de 2026",
-    text: "Fui selecionado para representar o Brasil na final global do STEAM AHEAD 2026, uma das competições acadêmicas internacionais mais respeitadas, com participantes de mais de 30 países. Ela reúne cinco grandes olimpíadas globais, com provas de matemática, ciências, cibersegurança, informática e artes. Participar da etapa presencial parece algo distante, mas sigo sonhando em estar lá.",
+    text: "O STEAM AHEAD é uma das competições acadêmicas internacionais mais respeitadas e reúne cinco grandes olimpíadas globais, com provas de matemática, ciências, cibersegurança, informática e artes. Participar da etapa presencial parece algo distante, mas sigo sonhando em estar lá.",
+    stats: [
+      { value: "30+", label: "países participantes" },
+      { value: "5", label: "olimpíadas globais reunidas" },
+      { value: "Brasil", label: "é quem vou representar" },
+    ],
+    cta: "Quero ajudar o Augusto",
   },
 
   // O que já aconteceu
