@@ -6,10 +6,10 @@ import { site } from "@/data/site"
 export function Olympiads() {
   const { highlight } = site
   return (
-    <section id="olimpiadas" className="mx-auto max-w-5xl px-6 py-20">
-      <h2 className="mb-8 text-2xl font-bold tracking-tight">Olimpíadas</h2>
+    <section id="olimpiadas" className="mx-auto max-w-5xl px-4 py-14 md:py-20">
+      <h2 className="mb-6 text-3xl font-bold tracking-tight">Olimpíadas</h2>
 
-      <Card className="mb-6 border-primary/30 bg-primary/5">
+      <Card className="mb-6 border-amber-300 bg-amber-50 dark:bg-amber-950/20">
         <CardHeader>
           <div className="mb-2 flex size-10 items-center justify-center rounded-full bg-accent text-accent-foreground">
             <Medal className="size-5" />

@@ -5,6 +5,11 @@ Site de portfólio de Augusto de Paula Bezerra (menor de idade — o pai/mãe é
 ## Objetivo do site
 Conseguir patrocínio privado para as olimpíadas científicas do Augusto, atraindo empresas que apoiam a educação. Todo o texto deve servir a isso: credibilidade (medalha, mídia), confiança (transparência) e um convite claro para apoiar. Ele participa de olimpíadas — não faz "projetos"; não usar essa palavra.
 
+## Público e tom
+- Quem decide é um empresário/investidor, geralmente no celular: **mobile-first** (testar em 375px; botões com 48px de altura; sem rolagem horizontal).
+- Tom amistoso e caloroso. Augusto fala em primeira pessoa (hero, sobre, olimpíadas); a família fala em "nós" (seção Apoie e contato).
+- A página responde: quem é, que resultado tem, o que pedem, como o apoio é usado, o que a empresa recebe, como começar. Nunca prometer valores, cotas ou benefícios fiscais sem a família confirmar.
+
 ## Stack
 - Front: React 19 + TypeScript + Vite, Tailwind v4, shadcn/ui com preset `b6Ggajhyq` e base React Aria (`npx shadcn@latest init --preset b6Ggajhyq --base aria`), componentes em `src/components/ui/`. Botão de link = `LinkButton` (sem `asChild`).
 - Back (próxima etapa): funções serverless do Vercel em `api/` + Neon Postgres (integração do Vercel, plano free) via `@neondatabase/serverless`
@@ -27,7 +32,8 @@ Conseguir patrocínio privado para as olimpíadas científicas do Augusto, atrai
 
 ## Estado
 - [x] Home: hero, sobre, olimpíadas, na mídia, apoie (patrocínio), contato
-- [ ] E-mail/WhatsApp de contato em `site.email` (hoje só Instagram)
+- [ ] WhatsApp/e-mail em `site.whatsapp`/`site.email` (sem eles, o botão cai no Instagram DM)
+- [ ] Foto do Augusto em `public/img/augusto.jpg` (sem ela aparece a letra A)
 - [ ] Revisar textos de benefícios/uso do apoio em `site.sponsorship`
 - [ ] Conteúdo real (bio, interesses, projetos, fotos)
 - [ ] Back-end: galeria de projetos e formulário de contato no Neon

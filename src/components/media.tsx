@@ -71,8 +71,8 @@ export function Media() {
 
   return (
     <section id="midia" className="border-t bg-secondary/50">
-      <div className="mx-auto max-w-5xl px-6 py-20">
-        <h2 className="mb-2 text-2xl font-bold tracking-tight">Na mídia</h2>
+      <div className="mx-auto max-w-5xl px-4 py-14 md:py-20">
+        <h2 className="mb-2 text-3xl font-bold tracking-tight">Na mídia</h2>
         <p className="mb-6 text-muted-foreground">
           A trajetória do {site.firstName} em matérias, vídeos e redes sociais, das mais recentes às mais antigas.
         </p>
