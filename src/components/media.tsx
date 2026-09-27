@@ -18,7 +18,7 @@ const typeIcon = { site: Newspaper, video: PlayCircle, social: Share2 } as const
 function Thumb({ item }: { item: PressItem }) {
   const [failed, setFailed] = useState(false)
   const Icon = typeIcon[item.type]
-  const hasImage = item.image && !failed
+  const hasImage = item.image?.startsWith("/") && !failed
   return (
     <div className="relative aspect-video overflow-hidden bg-muted md:aspect-auto md:min-h-72">
       {hasImage ? (
@@ -26,7 +26,6 @@ function Thumb({ item }: { item: PressItem }) {
           src={item.image}
           alt={`Imagem da matéria do ${item.outlet}`}
           loading="lazy"
-          referrerPolicy="no-referrer"
           onError={() => setFailed(true)}
           className="absolute inset-0 size-full object-cover"
         />
@@ -72,9 +71,9 @@ export function Media() {
   return (
     <section id="midia" className="border-t bg-secondary/50">
       <div className="mx-auto max-w-5xl px-4 py-14 md:py-20">
-        <h2 className="mb-2 text-3xl font-bold tracking-tight">Na mídia</h2>
+        <h2 className="mb-2 text-3xl font-bold tracking-tight">Na imprensa</h2>
         <p className="mb-6 text-muted-foreground">
-          A trajetória do {site.firstName} em matérias, vídeos e redes sociais, das mais recentes às mais antigas.
+          Reportagens, vídeos e publicações que contaram a trajetória do {site.firstName}.
         </p>
 
         <div className="mb-8 flex flex-wrap gap-2">

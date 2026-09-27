@@ -6,9 +6,16 @@ Site de portfólio de Augusto de Paula Bezerra (menor de idade — o pai/mãe é
 Conseguir patrocínio privado para as olimpíadas científicas do Augusto, atraindo empresas que apoiam a educação. Todo o texto deve servir a isso: credibilidade (medalha, mídia), confiança (transparência) e um convite claro para apoiar. Ele participa de olimpíadas — não faz "projetos"; não usar essa palavra.
 
 ## Público e tom
-- Quem decide é um empresário/investidor, geralmente no celular: **mobile-first** (testar em 375px; botões com 48px de altura; sem rolagem horizontal).
-- Tom amistoso e caloroso. Augusto fala em primeira pessoa (hero, sobre, olimpíadas); a família fala em "nós" (seção Apoie e contato).
-- A página responde: quem é, que resultado tem, o que pedem, como o apoio é usado, o que a empresa recebe, como começar. Nunca prometer valores, cotas ou benefícios fiscais sem a família confirmar.
+- Quem decide é um empresário, geralmente no celular: **mobile-first** (testar em 375px; botões de 48px; sem rolagem horizontal).
+- O site é um **convite humilde da família**, não uma página de vendas. Nada de funil, contadores, "o que sua empresa recebe", passos, FAQ comercial, botão fixo repetido ou contrapartidas de marca. Augusto fala em primeira pessoa (hero, sobre, olimpíadas); a família fala em "nós" (convite e contato).
+- O desafio atual: Final Global do STEAM AHEAD 2026, Tashkent (Uzbequistão), 11 a 16/12/2026. Ele sonha em ir à etapa presencial. Nunca prometer valores, cotas, benefícios fiscais ou retorno para a empresa sem a família confirmar.
+
+## Conformidade (LGPD, ECA e ECA Digital: Augusto é criança)
+- Sem cookies, analytics, anúncios, pixels, fontes/CDN/imagens de terceiros, embeds ou formulários que coletem dados. Conferir sempre: nenhuma requisição externa (`performance.getEntriesByType('resource')`) e `document.cookie` vazio. Se algum dia entrar analytics ou formulário, atualizar o bloco "Sobre este site" (`site.privacy`) e ter base legal/consentimento dos responsáveis.
+- Sem imagem de terceiros hospedada por link (`image` em `press.ts` só aceita arquivos locais em `public/img/`). Miniaturas de jornais só com autorização.
+- Não divulgar escola, endereço, cidade (só "Ceará"), data de nascimento, idade nem diagnósticos/altas habilidades. Títulos de matérias são reescritos em tom neutro. Foto sem brasão de escola visível.
+- Contato sempre com os responsáveis. Sem uso comercial da imagem da criança (sem marcas "patrocinadoras" no site, sem publicidade).
+- "Lei da informática": interpretado como LGPD/ECA Digital. Se a família quiser incentivos fiscais (Lei de Informática 8.248/91 e similares), isso exige formalização própria; o site não deve prometer nada disso.
 
 ## Stack
 - Front: React 19 + TypeScript + Vite, Tailwind v4, shadcn/ui com preset `b6Ggajhyq` e base React Aria (`npx shadcn@latest init --preset b6Ggajhyq --base aria`), componentes em `src/components/ui/`. Botão de link = `LinkButton` (sem `asChild`).
@@ -34,7 +41,7 @@ Conseguir patrocínio privado para as olimpíadas científicas do Augusto, atrai
 - [x] Home: hero, sobre, olimpíadas, na mídia, apoie (patrocínio), contato
 - [ ] WhatsApp/e-mail em `site.whatsapp`/`site.email` (sem eles, o botão cai no Instagram DM)
 - [ ] Foto do Augusto em `public/img/augusto.jpg` (sem ela aparece a letra A)
-- [ ] Revisar textos de benefícios/uso do apoio em `site.sponsorship`
+- [ ] Publicações do Instagram: trocar "Publicação 1/2" e "Reel" em `press.ts` pelas legendas reais
 - [ ] Conteúdo real (bio, interesses, projetos, fotos)
 - [ ] Back-end: galeria de projetos e formulário de contato no Neon
 - [ ] Repo no GitHub + deploy no Vercel

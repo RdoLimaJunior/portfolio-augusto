@@ -7,35 +7,23 @@ export function Contact() {
   const main = primaryContact()
   const Icon = site.email && !site.whatsapp ? Mail : MessageCircle
   return (
-    <section id="contato" className="border-t bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-5xl px-4 py-14 text-center md:py-20">
-        <h2 className="mb-3 text-3xl font-bold tracking-tight">Vamos conversar?</h2>
-        <p className="mx-auto mb-8 max-w-xl text-lg leading-relaxed opacity-90">
-          Sua empresa acredita na educação? Chame a família do {site.firstName}. Conversamos com carinho e sem compromisso.
+    <section id="contato" className="border-t">
+      <div className="mx-auto max-w-3xl px-4 py-14 md:py-20">
+        <h2 className="mb-3 text-2xl font-bold tracking-tight">Vamos conversar?</h2>
+        <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
+          A conversa é sempre com os responsáveis pelo {site.firstName}. Escreva com calma, sem compromisso.
         </p>
-        <div className="mx-auto flex max-w-sm flex-col gap-3">
-          <LinkButton
-            href={main.href}
-            target="_blank"
-            rel="noreferrer noopener"
-            variant="secondary"
-            size="lg"
-            className="h-12 text-base"
-          >
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <LinkButton href={main.href} target="_blank" rel="noreferrer noopener" size="lg" className="h-12 px-6 text-base">
             <Icon /> {main.label}
           </LinkButton>
-          {site.email && site.whatsapp && (
-            <LinkButton href={`mailto:${site.email}`} variant="outline" size="lg" className="h-12 bg-transparent text-base text-primary-foreground hover:bg-primary-foreground/10">
-              <Mail /> Enviar e-mail
-            </LinkButton>
-          )}
           <LinkButton
             href={site.instagram}
             target="_blank"
             rel="noreferrer noopener"
             variant="outline"
             size="lg"
-            className="h-12 bg-transparent text-base text-primary-foreground hover:bg-primary-foreground/10"
+            className="h-12 px-6 text-base"
           >
             Acompanhe no Instagram <ExternalLink />
           </LinkButton>
