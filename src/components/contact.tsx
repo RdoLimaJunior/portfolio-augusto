@@ -7,7 +7,7 @@ import { site } from "@/data/site"
 export function Contact() {
   const main = primaryContact("apoio")
   return (
-    <section id="contato" className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-emerald-500 to-sky-500 text-white">
+    <section id="contato" className="relative overflow-hidden bg-gradient-to-br from-emerald-800 via-emerald-700 to-sky-700 text-white">
       <div aria-hidden="true" className="bg-dots absolute inset-0 opacity-30" />
       <Heart aria-hidden="true" className="absolute left-[8%] top-10 size-8 animate-float fill-rose-300 text-rose-300" />
       <Star aria-hidden="true" className="absolute right-[10%] top-16 size-7 animate-float-slow fill-amber-300 text-amber-300" />

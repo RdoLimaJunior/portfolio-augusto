@@ -53,6 +53,12 @@ Portfólio olímpico: vivo e colorido (verde e amarelo do Brasil, azul-céu, cor
 - `/imprensa` (`pages/press-kit.tsx`, conteúdo em `data/press-kit.ts`): nota à imprensa, fatos, biografias, fotos para baixar, regras de uso da imagem e cobertura. Só fatos já publicados ou informados pela família; a única citação é do post do próprio Augusto no Instagram (não inventar falas). Sem idade, escola, cidade ou diagnóstico. A foto da família NÃO entra nos downloads.
 - Roteamento simples por `window.location.pathname` em `App.tsx` (o Vercel devolve `index.html` para `/imprensa`).
 
+## Boas práticas (revisão geral)
+- `vercel.json` traz cabeçalhos de segurança e uma CSP que só permite recursos do próprio site (`default-src 'self'`; imagens `self`+`data:`; estilo com `unsafe-inline` por causa dos `style=` do React). Qualquer recurso externo novo (CDN, fonte, analytics, embed) será BLOQUEADO: se for realmente necessário, ajustar a CSP e a seção "Sobre este site". Testar antes de publicar servindo `dist/` com os mesmos cabeçalhos e olhando o console.
+- Compartilhamento: `index.html` tem título, descrição, Open Graph e imagem `public/og-image.jpg` (1200x630) com URL absoluta do domínio atual. Trocar `portfolio-augusto-tau.vercel.app` ao ligar um domínio próprio.
+- Acessibilidade: contraste AA no texto (fundos verdes escuros), `alt` em todas as fotos, rótulos em português nos controles do carrossel, movimento respeita `prefers-reduced-motion`.
+- Títulos de matérias não citam cidade, escola, idade nem diagnóstico (revisar sempre ao importar).
+
 ## Pré-lançamento
 - O site está com `noindex` (em `index.html`) e `public/robots.txt` com `Disallow: /`, para o Google não listar enquanto a família revisa. NA HORA DE LANÇAR: remover a meta `robots` e trocar o robots.txt por `Allow: /`.
 

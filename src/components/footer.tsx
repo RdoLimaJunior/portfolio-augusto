@@ -63,7 +63,7 @@ export function Footer() {
             href={help.href}
             target="_blank"
             rel="noreferrer noopener"
-            className="h-10 rounded-full bg-emerald-500 px-4 text-sm font-extrabold text-white hover:bg-emerald-400"
+            className="h-10 rounded-full bg-emerald-600 px-4 text-sm font-extrabold text-white hover:bg-emerald-500"
           >
             <MessageCircle /> Quero ajudar
           </LinkButton>
