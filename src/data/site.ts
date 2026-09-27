@@ -57,6 +57,7 @@ export const site = {
     { src: "/img/augusto-medalha.jpg", ratio: 1.0, alt: "Augusto sorrindo, segurando a medalha de bronze", caption: "Com a medalha de bronze" },
     { src: "/img/augusto-livros.jpg", ratio: 1.46, alt: "Augusto sorrindo, apoiado em uma pilha de livros de ciências", caption: "Com os meus livros de ciências" },
   ],
+  medalsPhoto: { src: "/img/augusto-medalhas.jpg", alt: "Augusto comemorando, com os punhos para o alto e várias medalhas no pescoço", caption: "Comemorando com as medalhas" },
   family: { src: "/img/familia.jpg", ratio: 0.75, alt: "Augusto e os pais, sorrindo", caption: "A nossa família" },
 
   // Próximo desafio (o motivo do convite)
@@ -108,7 +109,7 @@ export const site = {
     "Este site é mantido pela família do Augusto, que responde pelo conteúdo e pela imagem dele.",
     "Não usamos cookies, anúncios nem rastreadores, e não coletamos dados de quem visita.",
     "Por segurança, não divulgamos escola, endereço ou outros dados pessoais.",
-    "O WhatsApp é o número dos responsáveis, usado só para parcerias e imprensa.",
+    "A conversa pelo WhatsApp é sempre com os responsáveis.",
     "Quem quiser conversar fala diretamente com os responsáveis.",
     "As matérias pertencem aos veículos de imprensa e abrem nos sites deles.",
   ],

@@ -29,10 +29,18 @@ export function Olympiads() {
     <section id="olimpiadas" className="bg-emerald-50 py-14 md:py-20">
       <div className="mx-auto max-w-5xl px-4">
         <Reveal>
-          <h2 className="mb-2 text-3xl font-extrabold tracking-tight md:text-4xl">
-            Olimpíadas <span className="inline-block animate-wiggle">🏅</span>
-          </h2>
-          <p className="mb-8 text-lg text-indigo-950/70">Meu quadro de medalhas e por onde já passei. Toque nos pins!</p>
+          <div className="mb-10 grid items-center gap-8 md:grid-cols-[1.1fr_1fr]">
+            <div>
+              <h2 className="mb-2 text-3xl font-extrabold tracking-tight md:text-4xl">
+                Olimpíadas <span className="inline-block animate-wiggle">🏅</span>
+              </h2>
+              <p className="text-lg text-indigo-950/70">Meu quadro de medalhas e por onde já passei. Toque nos pins do mapa!</p>
+            </div>
+            <figure className="mx-auto w-full max-w-md rotate-1 overflow-hidden rounded-3xl border-8 border-white bg-white shadow-xl">
+              <img src={site.medalsPhoto.src} alt={site.medalsPhoto.alt} loading="lazy" className="w-full object-cover" />
+              <figcaption className="px-3 py-2 text-center text-sm font-bold text-indigo-950/80">{site.medalsPhoto.caption}</figcaption>
+            </figure>
+          </div>
         </Reveal>
 
         <Reveal>

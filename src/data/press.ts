@@ -154,6 +154,7 @@ const rawItems: PressItem[] = [
     outlet: "Jornal Jangadeiro",
     title: "Reportagem em vídeo (Facebook)",
     url: "https://www.facebook.com/jornaljangadeiro/videos/840600248753377/",
+    image: "/img/imprensa/18-jangadeiro-video.jpg",
   },
   {
     type: "social",
@@ -178,6 +179,7 @@ const rawItems: PressItem[] = [
     outlet: "Instagram",
     title: "Reel",
     url: "https://www.instagram.com/reels/DWomw-0jjej/",
+    image: "/img/imprensa/22-instagram-reel-DWomw-0jjej.jpg",
   },
 ]
 

@@ -4,7 +4,7 @@ import { LinkButton } from "@/components/ui/button"
 import { press } from "@/data/press"
 import { pressKit } from "@/data/press-kit"
 import { site } from "@/data/site"
-import { primaryContact, whatsappDisplay } from "@/lib/contact"
+import { primaryContact } from "@/lib/contact"
 
 function formatDate(ym: string) {
   const [y, m] = ym.split("-").map(Number)
@@ -58,7 +58,7 @@ export function PressKit() {
         <section className="mt-12 rounded-3xl bg-emerald-600 p-6 text-white md:p-8">
           <h2 className="text-2xl font-extrabold">Contato de imprensa</h2>
           <p className="mt-2 text-lg text-white/95">
-            Falamos direto com os responsáveis: WhatsApp <strong>{whatsappDisplay()}</strong>.
+            Falamos direto com os responsáveis. Toque no botão para iniciar uma conversa pelo WhatsApp.
           </p>
           <LinkButton
             href={contact.href}
@@ -97,7 +97,7 @@ export function PressKit() {
         </section>
 
         {/* Fotos */}
-        <section className="mt-12">
+        <section id="fotos" className="mt-12 scroll-mt-4">
           <h2 className="mb-1 text-2xl font-extrabold">Fotos para baixar</h2>
           <p className="mb-5 text-indigo-950/70">Versões para web. Crédito obrigatório: “{pressKit.credit}”. Alta resolução sob pedido.</p>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">

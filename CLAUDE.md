@@ -58,7 +58,7 @@ Portfólio olímpico: vivo e colorido (verde e amarelo do Brasil, azul-céu, cor
 
 ## Estado
 - [x] Home: hero, sobre, olimpíadas, na mídia, apoie (patrocínio), contato
-- [x] WhatsApp dos responsáveis em `site.whatsapp` (parcerias e imprensa, com mensagens prontas em `lib/contact.ts`)
+- [x] WhatsApp dos responsáveis em `site.whatsapp` (NUNCA mostrar o número na tela; só links `wa.me` com mensagem pronta em `lib/contact.ts`, pelo botão flutuante `whatsapp-fab.tsx` e pelos botões de contato). Não usar a palavra "parceria" no site.
 - [ ] Publicações do Instagram: trocar "Publicação 1/2" e "Reel" em `press.ts` pelas legendas reais
 - [ ] Conteúdo real (bio, interesses, projetos, fotos)
 - [ ] Back-end: galeria de projetos e formulário de contato no Neon

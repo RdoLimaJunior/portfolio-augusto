@@ -8,6 +8,7 @@ import { Media } from "@/components/media"
 import { Sponsor } from "@/components/sponsor"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { WhatsAppFab } from "@/components/whatsapp-fab"
 import { PressKit } from "@/pages/press-kit"
 
 function Home() {
@@ -25,6 +26,7 @@ function Home() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppFab />
     </div>
   )
 }
@@ -32,5 +34,12 @@ function Home() {
 /** Sem biblioteca de rotas: o site só tem duas páginas. O Vercel já devolve o index.html para /imprensa. */
 export default function App() {
   const path = window.location.pathname.replace(/\/+$/, "")
-  return path === "/imprensa" ? <PressKit /> : <Home />
+  return path === "/imprensa" ? (
+    <>
+      <PressKit />
+      <WhatsAppFab topic="imprensa" />
+    </>
+  ) : (
+    <Home />
+  )
 }
