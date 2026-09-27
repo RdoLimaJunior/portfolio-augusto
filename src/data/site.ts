@@ -107,9 +107,9 @@ export const site = {
 
   // Sobre este site (privacidade). Só mantenha estas frases enquanto forem verdadeiras.
   privacy: [
-    "Site mantido pela família, que responde pelo conteúdo e pela imagem dele.",
-    "Sem cookies, anúncios ou rastreadores. Não divulgamos escola, endereço ou dados pessoais.",
-    "A conversa é sempre com os responsáveis.",
-    "As matérias pertencem aos veículos de imprensa.",
+    { title: "Feito pela família", text: "O site é mantido pela família, que responde pelo conteúdo e pela imagem do Augusto." },
+    { title: "Sem rastreadores", text: "Sem cookies, anúncios ou rastreadores. Não coletamos dados de quem visita." },
+    { title: "Dados protegidos", text: "Não divulgamos escola, endereço ou dados pessoais. A conversa é sempre com os responsáveis." },
+    { title: "Crédito à imprensa", text: "As matérias pertencem aos veículos de imprensa, e as imagens levam o crédito de cada um." },
   ],
 }

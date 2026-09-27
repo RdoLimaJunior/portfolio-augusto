@@ -7,6 +7,7 @@ import { Olympiads } from "@/components/olympiads"
 import { Media } from "@/components/media"
 import { Sponsor } from "@/components/sponsor"
 import { Contact } from "@/components/contact"
+import { SiteNotes } from "@/components/site-notes"
 import { Footer } from "@/components/footer"
 import { WhatsAppFab } from "@/components/whatsapp-fab"
 import { PressKit } from "@/pages/press-kit"
@@ -24,6 +25,7 @@ function Home() {
         <Media />
         <Sponsor />
         <Contact />
+        <SiteNotes />
       </main>
       <Footer />
       <WhatsAppFab />
