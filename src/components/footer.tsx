@@ -13,15 +13,15 @@ const nav = [
 export function Footer() {
   return (
     <footer className="bg-indigo-950 text-indigo-100">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 md:grid-cols-4 md:gap-6 lg:gap-8">
         {/* Destaque: press release (primeiro no celular) */}
-        <div className="order-first rounded-3xl bg-amber-300 p-6 text-indigo-950 shadow-lg sm:col-span-2 lg:order-none lg:col-span-1">
+        <div className="order-first rounded-3xl bg-amber-300 p-5 text-indigo-950 shadow-lg sm:col-span-2 md:order-none md:col-span-1 lg:p-6">
           <FileText className="mb-3 size-8" />
           <h2 className="text-xl font-extrabold leading-tight">Para a imprensa</h2>
           <p className="mt-2 text-sm leading-relaxed">Nota à imprensa (press release), fatos rápidos, biografia e fotos para baixar.</p>
           <a
             href="/imprensa"
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-indigo-950 px-5 py-3 text-sm font-extrabold text-white no-underline transition-transform hover:-translate-y-0.5"
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-indigo-950 px-4 py-2.5 text-sm font-extrabold text-white no-underline transition-transform hover:-translate-y-0.5"
           >
             Ver o press release <ArrowRight className="size-4" />
           </a>
