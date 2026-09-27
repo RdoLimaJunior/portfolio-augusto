@@ -7,12 +7,6 @@ export const site = {
   about: {
     intro:
       "Sou o Augusto e amo aprender. Aprendi a ler bem pequeno, com 2 anos, e desde então estudo por conta própria. Meus assuntos favoritos são astronomia, química, física e biologia, e também gosto muito de inglês e de música: estudo violino e canto em um coral bilíngue.",
-    houstonTitle: "Minha prova em Houston",
-    houston: [
-      "Em janeiro de 2026 fui a Houston, nos Estados Unidos, para a etapa internacional da Copernicus Olympiad, uma competição criada em 2020 que reúne estudantes de vários países, do 3º ao 12º ano, em áreas como Ciências Naturais, Física e Astronomia, Empreendedorismo e Matemática.",
-      "Competi em Ciências Naturais, com uma prova de múltipla escolha de nível alto, sobre química, física, biologia e astronomia. As perguntas vêm em inglês, com a tradução embaixo, mas eu prefiro ler em inglês, porque a tradução às vezes me confunde.",
-      "Segundo a minha mãe, fiquei tranquilo e empolgado durante a prova. Na premiação recebi a medalha de bronze e subi ao palco com a bandeira do Ceará. Fiquei tão feliz que chorei ao descer, sem saber dar nome àquela emoção.",
-    ],
   },
   interests: ["Astronomia", "Química", "Física", "Biologia", "Inglês", "Violino", "Olimpíadas"],
   // Veículos que já contaram a história (só os confirmados pelos links de press.ts).
@@ -58,12 +52,12 @@ export const site = {
 
   // Momentos (fotos em public/img/). Sem metadados; sem brasão de escola; sem outras crianças identificáveis.
   gallery: [
-    { src: "/img/augusto-prova.jpg", alt: "Augusto concentrado, fazendo a prova da olimpíada em Houston", caption: "Durante a prova" },
-    { src: "/img/augusto-bandeira.jpg", alt: "Augusto com a bandeira do Ceará e a medalha, diante do painel da competição em Houston", caption: "Com a bandeira do Ceará" },
-    { src: "/img/augusto-medalha.jpg", alt: "Augusto sorrindo, segurando a medalha de bronze", caption: "Com a medalha de bronze" },
-    { src: "/img/augusto-livros.jpg", alt: "Augusto sorrindo, apoiado em uma pilha de livros de ciências", caption: "Com os meus livros de ciências" },
+    { src: "/img/augusto-prova.jpg", ratio: 1.78, alt: "Augusto concentrado, fazendo a prova da olimpíada em Houston", caption: "Durante a prova" },
+    { src: "/img/augusto-bandeira.jpg", ratio: 1.33, alt: "Augusto com a bandeira do Ceará e a medalha, diante do painel da competição em Houston", caption: "Com a bandeira do Ceará" },
+    { src: "/img/augusto-medalha.jpg", ratio: 1.0, alt: "Augusto sorrindo, segurando a medalha de bronze", caption: "Com a medalha de bronze" },
+    { src: "/img/augusto-livros.jpg", ratio: 1.46, alt: "Augusto sorrindo, apoiado em uma pilha de livros de ciências", caption: "Com os meus livros de ciências" },
   ],
-  family: { src: "/img/familia.jpg", alt: "Augusto e os pais, sorrindo", caption: "A nossa família" },
+  family: { src: "/img/familia.jpg", ratio: 0.75, alt: "Augusto e os pais, sorrindo", caption: "A nossa família" },
 
   // Próximo desafio (o motivo do convite)
   challenge: {
