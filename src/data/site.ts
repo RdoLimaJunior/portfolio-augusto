@@ -4,7 +4,16 @@ export const site = {
   firstName: "Augusto",
   tagline:
     "Sou curioso, amo ciências e participo de olimpíadas. Este ano fui selecionado para representar o Brasil em uma final global, no Uzbequistão.",
-  bio: "Sou o Augusto e amo aprender. Desde pequeno estudo e leio por conta própria, e hoje meus assuntos favoritos são astronomia, química, física e biologia. Também gosto muito de inglês e de participar de olimpíadas, onde encontro desafios que me fazem crescer. Minha família e minha escola estão sempre comigo.",
+  about: {
+    intro:
+      "Sou o Augusto e amo aprender. Aprendi a ler bem pequeno, com 2 anos, e desde então estudo por conta própria. Meus assuntos favoritos são astronomia, química, física e biologia, e também gosto muito de inglês.",
+    houstonTitle: "Minha prova em Houston",
+    houston: [
+      "Em janeiro de 2026 fui a Houston, nos Estados Unidos, para a etapa internacional da Copernicus Olympiad, uma competição criada em 2020 que reúne estudantes de vários países, do 3º ao 12º ano, em áreas como Ciências Naturais, Física e Astronomia, Empreendedorismo e Matemática.",
+      "Competi em Ciências Naturais, com uma prova de múltipla escolha de nível alto, sobre química, física, biologia e astronomia. As perguntas vêm em inglês, com a tradução embaixo, mas eu prefiro ler em inglês, porque a tradução às vezes me confunde.",
+      "Segundo a minha mãe, fiquei tranquilo e empolgado durante a prova. Na premiação recebi a medalha de bronze e subi ao palco com a bandeira do Ceará. Fiquei tão feliz que chorei ao descer, sem saber dar nome àquela emoção.",
+    ],
+  },
   interests: ["Astronomia", "Química", "Física", "Biologia", "Inglês", "Olimpíadas"],
   instagram: "https://www.instagram.com/augustodpb/",
   instagramDm: "https://ig.me/m/augustodpb",
@@ -18,6 +27,12 @@ export const site = {
   // (sugestão: uma foto sem uniforme ou brasão de escola visível)
   photo: "/img/augusto.jpg",
 
+  // Momentos (fotos em public/img/). Sem metadados; sem brasão de escola; sem outras crianças identificáveis.
+  gallery: [
+    { src: "/img/augusto-prova.jpg", alt: "Augusto concentrado, fazendo a prova da olimpíada em Houston", caption: "Durante a prova" },
+    { src: "/img/augusto-bandeira.jpg", alt: "Augusto com a bandeira do Ceará e a medalha, diante do painel da competição em Houston", caption: "Com a bandeira do Ceará" },
+  ],
+
   // Próximo desafio (o motivo do convite)
   challenge: {
     title: "Final Global do STEAM AHEAD 2026",
@@ -30,7 +45,7 @@ export const site = {
   highlight: {
     title: "Medalha de bronze na Copernicus Global Round 2026",
     place: "Houston, Texas (EUA) · Universidade Rice",
-    text: "Na etapa internacional da Copernicus Natural Science Olympiad, a prova de ciências naturais (química, física, biologia e astronomia) foi toda em inglês. Na premiação, subi ao palco com a bandeira do Ceará.",
+    text: "Na etapa internacional da Copernicus Olympiad, em Ciências Naturais, fui premiado com a medalha de bronze e subi ao palco com a bandeira do Ceará.",
   },
   olympiads: [
     { title: "Torneio Brasileiro de Ciências", description: "Participei e ganhei medalha de bronze. 🥉", tag: "Medalha de bronze" },
