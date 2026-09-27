@@ -18,8 +18,8 @@ export type PressItem = {
   image?: string
 }
 
-// Da mais recente para a mais antiga.
-const items: PressItem[] = [
+// A ordem aqui não importa: o catálogo se ordena por data (mais recente primeiro; sem data, no fim).
+const rawItems: PressItem[] = [
   {
     type: "site",
     outlet: "Portal 6",
@@ -47,20 +47,6 @@ const items: PressItem[] = [
     date: "2026-03",
     title: "Cearense conquista medalha em Olimpíada Internacional de Ciências, nos EUA",
     url: "https://revistacrescer.globo.com/maes-e-pais/historias/noticia/2026/03/aos-8-cearense-conquista-medalha-em-olimpiada-internacional-de-ciencias-nos-eua.ghtml",
-  },
-  {
-    type: "site",
-    outlet: "O Povo",
-    date: "2026-02",
-    title: "Cearense é premiado em olimpíada internacional",
-    url: "https://mais.opovo.com.br/jornal/cidades/2026/02/02/aos-8-anos-cearense-superdotado-e-premiado-em-olimpiada-internacional.html",
-  },
-  {
-    type: "site",
-    outlet: "Só Notícia Boa",
-    date: "2026-02",
-    title: "Brasileiro conquista medalha em olimpíada internacional de ciência",
-    url: "https://www.sonoticiaboa.com.br/2026/02/01/brasileiro-superdotado-de-8-anos-conquista-medalha-em-olimpiada-internacional-de-ciencia",
   },
   {
     type: "site",
@@ -113,13 +99,6 @@ const items: PressItem[] = [
   },
   {
     type: "site",
-    outlet: "URB News",
-    date: "2025-12",
-    title: "Governo do Ceará e Prefeitura de Baturité vão custear viagem de estudante para olimpíada nos EUA",
-    url: "https://urbnews.com.br/2025/12/01/governo-do-ceara-e-prefeitura-de-baturite-vao-custear-viagem-de-estudante-superdotado-para-olimpiada-nos-eua/",
-  },
-  {
-    type: "site",
     outlet: "Diário do Nordeste",
     date: "2025-11",
     title: "Estudante se classifica em olimpíada nos EUA e família faz vaquinha para a viagem",
@@ -131,6 +110,34 @@ const items: PressItem[] = [
     date: "2022-10",
     title: "Reportagem sobre a busca por inclusão escolar e educação adequada",
     url: "https://diariodonordeste.verdesmares.com.br/ceara/superdotados-e-solitarios-criancas-com-altas-habilidades-enfrentam-ardua-busca-por-inclusao-escolar-1.3290690",
+  },
+  {
+    type: "site",
+    outlet: "O Povo",
+    date: "2026-01",
+    title: "Cearense é premiado em olimpíada internacional",
+    url: "https://www.opovo.com.br/noticias/ceara/2026/01/31/aos-8-anos-cearense-superdotado-e-premiado-em-olimpiada-internacional.html",
+  },
+  {
+    type: "site",
+    outlet: "Só Notícia Boa",
+    date: "2026-01",
+    title: "Menino brasileiro conquista medalha em olimpíada internacional de ciência",
+    url: "https://www.sonoticiaboa.com.br/2026/01/30/menino-brasileiro-superdotado-conquista-medalha-em-olimpiada-internacional-de-ciencia",
+  },
+  {
+    type: "video",
+    outlet: "Diário do Nordeste (YouTube)",
+    date: "2026-01",
+    title: "Vídeo sobre a medalha em olimpíada internacional de ciências nos EUA",
+    url: "https://www.youtube.com/shorts/bdvtKy8Zi_A",
+  },
+  {
+    type: "site",
+    outlet: "Diário do Nordeste",
+    date: "2025-12",
+    title: "Governo do Ceará e Prefeitura vão custear a viagem do estudante à olimpíada nos EUA",
+    url: "https://diariodonordeste.verdesmares.com.br/ceara/crianca-superdotada-tera-viagem-a-olimpiada-nos-eua-paga-pelo-governo-do-ce-e-prefeitura-de-baturite-1.3714751",
   },
   {
     type: "video",
@@ -176,6 +183,8 @@ export function normalizeUrl(raw: string) {
     return raw.trim().toLowerCase()
   }
 }
+
+const items = [...rawItems].sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""))
 
 // Itens repetidos (mesma URL) são descartados; vale o primeiro da lista.
 const seen = new Set<string>()
