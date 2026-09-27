@@ -44,6 +44,9 @@ Portfólio olímpico: vivo e colorido (verde e amarelo do Brasil, azul-céu, cor
 - Não inventar fatos sobre o Augusto nem publicar dados pessoais (endereço, escola, telefone, data de nascimento completa) sem o responsável aprovar.
 - Instagram: https://www.instagram.com/augustodpb/
 
+## Pré-lançamento
+- O site está com `noindex` (em `index.html`) e `public/robots.txt` com `Disallow: /`, para o Google não listar enquanto a família revisa. NA HORA DE LANÇAR: remover a meta `robots` e trocar o robots.txt por `Allow: /`.
+
 ## Estado
 - [x] Home: hero, sobre, olimpíadas, na mídia, apoie (patrocínio), contato
 - [ ] WhatsApp/e-mail em `site.whatsapp`/`site.email` (sem eles, o botão cai no Instagram DM)
