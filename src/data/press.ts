@@ -29,6 +29,13 @@ const items: PressItem[] = [
   },
   {
     type: "site",
+    outlet: "Click Petróleo e Gás",
+    date: "2026-08",
+    title: "Estudante cearense enfrenta prova internacional de ciências nos EUA e conquista medalha de bronze",
+    url: "https://clickpetroleoegas.com.br/aos-8-anos-e-ainda-sem-os-dentes-da-frente-menino-superdotado-de-escola-publica-rural-do-ceara-enfrenta-prova-internacional-de-quimica-fisica-biologia-e-astronomia-nos-eua-conquista-m-asaf04/",
+  },
+  {
+    type: "site",
     outlet: "Casa do Ceará",
     date: "2026-08",
     title: "Augusto de Paula Bezerra leva o Ceará ao pódio em olimpíada internacional de Ciências",
@@ -117,6 +124,13 @@ const items: PressItem[] = [
     date: "2025-11",
     title: "Estudante se classifica em olimpíada nos EUA e família faz vaquinha para a viagem",
     url: "https://diariodonordeste.verdesmares.com.br/ceara/crianca-superdotada-do-ce-se-classifica-em-olimpiada-nos-eua-e-familia-faz-vaquinha-para-viagem-1.3714210",
+  },
+  {
+    type: "site",
+    outlet: "Diário do Nordeste",
+    date: "2022-10",
+    title: "Reportagem sobre a busca por inclusão escolar e educação adequada",
+    url: "https://diariodonordeste.verdesmares.com.br/ceara/superdotados-e-solitarios-criancas-com-altas-habilidades-enfrentam-ardua-busca-por-inclusao-escolar-1.3290690",
   },
   {
     type: "video",
