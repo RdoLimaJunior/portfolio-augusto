@@ -21,7 +21,7 @@ export function About() {
           ))}
         </div>
 
-        <div className="-mx-4 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0">
+        <div className="-mx-4 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible lg:grid-cols-4 sm:px-0">
           {site.gallery.map((g) => (
             <figure key={g.src} className="w-[75%] shrink-0 snap-center sm:w-auto">
               <img src={g.src} alt={g.alt} loading="lazy" className="aspect-[3/4] w-full rounded-2xl object-cover shadow-sm" />

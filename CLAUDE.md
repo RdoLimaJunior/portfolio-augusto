@@ -14,7 +14,8 @@ Conseguir patrocínio privado para as olimpíadas científicas do Augusto, atrai
 - Sem cookies, analytics, anúncios, pixels, fontes/CDN/imagens de terceiros, embeds ou formulários que coletem dados. Conferir sempre: nenhuma requisição externa (`performance.getEntriesByType('resource')`) e `document.cookie` vazio. Se algum dia entrar analytics ou formulário, atualizar o bloco "Sobre este site" (`site.privacy`) e ter base legal/consentimento dos responsáveis.
 - Sem imagem de terceiros hospedada por link (`image` em `press.ts` só aceita arquivos locais em `public/img/`). Miniaturas de jornais só com autorização.
 - Não divulgar escola, endereço, cidade (só "Ceará"), data de nascimento, idade nem diagnósticos/altas habilidades. Títulos de matérias são reescritos em tom neutro. Foto sem brasão de escola visível.
-- Fotos em `public/img/`: só do Augusto, sem brasão/nome de escola visível (borrar ou recortar), sem outras crianças identificáveis nem nomes de terceiros em telas/placas, sem metadados (EXIF), redimensionadas (~1000px). Fontes: `src/data/site.ts` (`photo`, `gallery`).
+- Fotos em `public/img/`: só do Augusto, sem brasão/nome de escola visível (borrar ou recortar), sem outras crianças identificáveis nem nomes de terceiros em telas/placas, sem metadados (EXIF), redimensionadas (~1000px). Fontes: `src/data/site.ts` (`photo` = capa larga 2:1 no topo, `gallery`, `family`).
+- Não publicar chave Pix, e-mail pessoal nem dados de pagamento (a matéria do Diário de 30/11/2025 traz a chave Pix da família: não copiar). Nomes de escola, diretora e outras crianças também ficam de fora.
 - Contato sempre com os responsáveis. Sem uso comercial da imagem da criança (sem marcas "patrocinadoras" no site, sem publicidade).
 - "Lei da informática": interpretado como LGPD/ECA Digital. Se a família quiser incentivos fiscais (Lei de Informática 8.248/91 e similares), isso exige formalização própria; o site não deve prometer nada disso.
 

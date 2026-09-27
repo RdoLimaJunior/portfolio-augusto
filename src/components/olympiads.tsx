@@ -34,7 +34,7 @@ export function Olympiads() {
         <CardContent className="max-w-3xl leading-relaxed text-muted-foreground">{highlight.text}</CardContent>
       </Card>
 
-      <h3 className="mb-4 text-lg font-semibold">Outras olimpíadas</h3>
+      <h3 className="mb-4 text-lg font-semibold">{site.olympiadsTitle}</h3>
       <div className="grid gap-4 sm:grid-cols-2">
         {site.olympiads.map((o) => (
           <Card key={o.title}>
